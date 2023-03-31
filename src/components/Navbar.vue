@@ -19,7 +19,7 @@ export default {
 <style scoped>
   #nav {
     background-color: #222;
-    border-bottom: 4px solid #111;
+    border-bottom: 4px solid #8B0000;
     padding: 15px 50px;
     display: flex;
     justify-content: flex-end;
@@ -36,14 +36,23 @@ export default {
     height: 40px;
   }
 
+  #nav {
+    background-color: #222;
+    padding: 20px;
+  }
+
   #nav a {
+    font-size: 24px;
     color: #FCBA03;
     text-decoration: none;
-    margin: 12px;
+    margin-right: 30px;
     transition: .5s;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
   }
 
   #nav a:hover {
     color: #FFF;
+    border-bottom: 3px solid #FCBA03;
   }
 </style>

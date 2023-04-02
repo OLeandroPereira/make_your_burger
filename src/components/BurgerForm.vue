@@ -28,15 +28,15 @@
           </div>
           <div class="checkbox-container">
             <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-            <span>Salame</span>
+            <span>Bacon</span>
           </div>
           <div class="checkbox-container">
             <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-            <span>Salame</span>
+            <span>Cebola Roxa</span>
           </div>
         </div>
         <div class="input-container">
-          <input type="submit" class="submit-btn" value="criar meu Burger!">
+          <input type="submit" class="submit-btn" value="Criar meu Burger!">
         </div>
       </form>
     </div>
@@ -101,10 +101,10 @@ export default {
     font-weight: bold;
   }
   .submit-btn {
-    background-color: #222;
-    color: #FCBA03;
+    background-color: #e74c3c;
+    color: #fff;
     font-weight: bold;
-    border: 2px solid #222;
+    border: 2px solid #e74c3c;
     padding: 10px;
     font-size: 16px;
     margin: 0 auto;
@@ -114,6 +114,6 @@ export default {
 
   .submit-btn:hover {
     background-color: transparent;
-    color: #222;
+    color: #c0392b;
   }
 </style>

@@ -40,13 +40,14 @@ export default {
   font-size: 60px;
   background-color: #8B0000;
   padding: 20px 40px;
-  box-shadow: 3px 3px 3px #555;
+  box-shadow: 3px 3px 3px #FCBA03;
+  top: 0px;
+  left: 50px;
   position: relative;
   transform: translate(-50%, -50%);
   z-index: 2;
   transform: translateY(0px);
   animation: float 5s ease-in-out infinite;
-  margin: auto;
 }
 
 @keyframes float {

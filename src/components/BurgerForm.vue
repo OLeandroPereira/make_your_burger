@@ -55,7 +55,6 @@ export default {
     margin: 0 auto;
     
   }
-
   .input-container {
     display: flex;
     flex-direction: column;
@@ -83,14 +82,12 @@ export default {
   #opcionais-title {
     width: 100%;
   }
-
   .checkbox-container {
     display: flex;
     align-items: flex-start;
     width: 50%;
     margin-bottom: 20px;
   }
-
   .checkbox-container span,
   .checkbox-container input {
     width: auto;

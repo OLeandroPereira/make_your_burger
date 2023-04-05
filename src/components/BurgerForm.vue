@@ -175,6 +175,6 @@ export default {
 
   .submit-btn:hover {
     background-color: transparent;
-    color: #c0392b;
+    color: #e74c3c;
   }
 </style>

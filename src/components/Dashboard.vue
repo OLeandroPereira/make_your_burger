@@ -15,7 +15,7 @@
         <div class="order-number">{{ burger.id }}</div>
         <div>{{ burger.nome }}</div>
         <div>{{ burger.pao }}</div>
-        <div>{{ burger.carne }}}</div>
+        <div>{{ burger.carne }}</div>
         <div>
           <ul>
             <li v-for="(opcional, index) in burger.opcionais" :key="index">
@@ -30,7 +30,7 @@
               {{ s.tipo }}
             </option>
           </select>
-          <button class="delete-btn">Cancelar</button>
+          <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
         </div>
       </div>
     </div>
@@ -56,8 +56,6 @@ export default {
 
       this.burgers = data;
 
-      console.log(this.burgers);
-
       // resgatar os status
       this.getStatus();
 
@@ -70,7 +68,18 @@ export default {
 
       this.status = data;
 
-      console.log(data);
+    },
+    async deleteBurger(id) {
+
+      const req = await fetch(`http://localhost:3000/Burgers/${id}`,  {
+        method: "DELETE"
+      });
+
+      const res = await req.json();
+
+      // msg
+
+      this.getPedidos();
 
     }
   },

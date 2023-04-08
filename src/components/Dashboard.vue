@@ -18,16 +18,13 @@
         <div>{{ burger.pao }}</div>
         <div>{{ burger.carne }}</div>
         <div>
-          <ul>
-            <li v-for="(opcional, index) in burger.opcionais" :key="index">
-              {{ opcional }}
-            </li>
+          <ul v-for="(opcional, index) in burger.opcionais" :key="index">
+            <li>{{ opcional }}</li>
           </ul>
         </div>
         <div>
           <select name="status" class="status" @change="updateBurger($event, burger.id)">
-            <option value="">Selecione</option>
-            <option v-for="s in status" :key="s.id" :value="s.tipo" :selected="burger.status == s.tipo">
+            <option :value="s.tipo" v-for="s in status" :key="s.id" :selected="burger.status == s.tipo">
               {{ s.tipo }}
             </option>
           </select>
@@ -101,7 +98,7 @@ export default {
 
       const req = await fetch(`http://localhost:3000/burgers/${id}`, {
         method: "PATCH",
-        headers: { "Content-Type": "application/json"},
+        headers: { "Content-Type" : "application/json" },
         body: dataJson
       });
 
@@ -131,6 +128,7 @@ export default {
   .burger-table-row {
     display: flex;
     flex-wrap: wrap;
+    
   }
 
   #burger-table-heading {
@@ -147,7 +145,8 @@ export default {
   .burger-table-row {
     width: 100%;
     padding: 12px;
-    border-bottom: 1px solid #CCC;
+    background-color: #fffcf8;
+    border-bottom: 1px solid #FCBA03;
   }
 
   #burger-table-heading .order-id,

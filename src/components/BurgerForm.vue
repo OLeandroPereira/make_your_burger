@@ -54,18 +54,19 @@ export default {
       pao: null,
       carne: null,
       opcionais: [],
+      status: "Solicitado",
       msg: null
     }
   },
   methods: {
     async getIngredientes() {
 
-      const req = await fetch("http://localhost:3000/ingredientes");
+      const req = await fetch('http://localhost:3000/ingredientes');
       const data = await req.json();
 
-      this.paes = data.paes
-      this.carnes = data.carnes
-      this.opcionaisdata = data.opcionais
+      this.paes = data.paes;
+      this.carnes = data.carnes;
+      this.opcionaisdata = data.opcionais;
 
     },
     async createBurger(e) {
@@ -77,7 +78,7 @@ export default {
         carne: this.carne,
         pao: this.pao,
         opcionais: Array.from( this.opcionais),
-        status: "Solicitado"
+        status: "Solicitado",
       }
 
       const dataJson = JSON.stringify(data);
